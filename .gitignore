@@ -1,8 +1,14 @@
 .git/*
 env/
+.env/
+.env
+env
 venv/
-.venv
-.venv/
+
+.pytest_cache/*
+pytest
+pytest/
+.pytest/
 
 __pycache__/
 *.py[cod]
@@ -20,3 +26,10 @@ static/
 posts/static/
 
 db.sqlite3
+
+media/
+
+sent_emails/
+
+.vscode/
+vscode/
