@@ -5,7 +5,8 @@ from rest_framework.serializers import ValidationError
 
 from api_comments_reviews.models import Review
 from api_comments_reviews.permissions import HasPermissionsOrReadOnly
-from api_comments_reviews.serializers import CommentSerializer, ReviewSerializer
+from api_comments_reviews.serializers import (CommentSerializer,
+                                              ReviewSerializer)
 from api_titles_genres_categories.models import Titles
 
 
