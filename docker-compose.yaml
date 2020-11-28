@@ -31,6 +31,10 @@ services:
       - media_volume:/media
     restart: unless-stopped
 
+  dockerhub:
+    build: .
+    image: gooncharova2/mydock:v11.11.2020
+
 volumes:
   postgres_data:
   static_volume:

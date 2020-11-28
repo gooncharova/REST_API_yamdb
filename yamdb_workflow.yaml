@@ -11,7 +11,7 @@ jobs:
     - name: Set up Python 
       uses: actions/setup-python@v2
       with:
-        python-version: 3.8
+        python-version: 3.7
 
     - name: Install dependencies
       run: |
@@ -42,7 +42,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: gooncharova2/flask-app:latest
+          tags: gooncharova2/mydock:latest
   deploy:
     runs-on: ubuntu-18.04
     needs: build_and_push_to_docker_hub
@@ -55,9 +55,9 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
-          sudo docker pull gooncharova2/flask-app
+          sudo docker pull gooncharova2/mydock
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 gooncharova2/flask-app
+          sudo docker run --rm -d -p 5000:5000 gooncharova2/mydock
           
   send_message:
     runs-on: ubuntu-latest
