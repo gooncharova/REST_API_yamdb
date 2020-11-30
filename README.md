@@ -96,4 +96,4 @@ python manage.py migrate
 
 ### Статус workflow:
 
-![yamdb workflow](https://github.com/gooncharova/yamdb_final/workflows/yamdb_workflow/badge.svg)
+![yamdb workflow](https://github.com/gooncharova/yamdb_final/workflows/yamdb%workflow/badge.svg)
